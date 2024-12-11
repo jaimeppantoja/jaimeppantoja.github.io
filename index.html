@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Vancouver Housing Report </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/icons8-favicon-64.png" rel="icon">
+  <link href="assets/img/icons8-favicon-64.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    p {
+      text-align: justify;
+    }
+  </style>
+
+
+</head>
+
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Introduction</span></a></li>
+        <li><a href="#price"><i class="bi bi-currency-dollar"></i><span>Pricing Analysis</span></a></li>
+        <li><a href="#distribution"><i class="bi bi-pie-chart"></i><span>Properties Distribution</span></a></li>
+        <li><a href="#geo"><i class="bi bi-cookie"></i><span>Geospatial Insights</span></a></li>
+        <li><a href="#conclusion"><i class="bi bi-check-square"></i><span>Conclusion</span></a></li>
+
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <img src="assets/img/hero-bg.png" alt="">
+
+      <div class="container" data-aos="zoom-out">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <h2 style="color: #0563bb;">Vancouver Housing Report</h2>
+            <p style="margin-bottom: 50px; ">
+              November 2024
+
+            </p>
+            <p style="margin-bottom: 50px;text-align: justify;">
+              This report delivers a detailed analysis of the Vancouver real estate market, emphasizing current
+              pricing trends and property distributions. Utilizing data sourced from Zillow, the analysis is based on
+              800 observations from a broader dataset of over 4,000 listed properties in Vancouver. As of November 18,
+              2024, this dataset provides a solid basis for examining market dynamics and supporting strategic
+              decision-making.
+
+            </p>
+            <p style="margin-bottom: 50px;text-align: justify;">
+              The report goes beyond offering a snapshot of the current market, aiming to provide actionable insights
+              that empower investors, real estate professionals, and potential buyers to make well-informed decisions.
+              By integrating diverse analytical methods, it delivers a thorough and detailed exploration of the
+              Vancouver
+              real estate landscape, uncovering trends and patterns that inform strategic planning and decision-making.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 id="price">Pricing Analysis</h2>
+        <p style="margin-bottom: 0px;text-align: justify;">
+          This section offers a complete analysis of the Vancouver real estate market, focusing on the overall
+          price distribution and its segmentation across various property types. The general price distribution
+          highlights prevalent price ranges, outliers, and market trends, providing valuable insights for a
+          wide range of stakeholders.</p>
+      </div><!-- End Section Title -->
+
+
+      <!-- Pricing Analysis Section -->
+      <div>
+
+        <!-- Chart Analysis Element -->
+        <div class="container" data-aos="fade-up" data-aos-delay="100"
+          style="border-top: solid 1px rgba(67, 63, 63, 0.17);">
+
+          <div class="row gy-4 justify-content-center">
+
+
+            <div class="col-lg-8">
+              <img src="assets/img/Histogram_Housing_Prices.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-4 content" style="margin-top: 80px;">
+              <h2 style="margin-bottom: 20px; text-align: center;">Distribution of Housing Prices</h2>
+              <p>
+                The histogram provides a clear visual representation of housing price distribution in Vancouver,
+                revealing a heavily left-skewed pattern. This highlights the prevalence of lower-priced homes alongside
+                a smaller proportion of highly expensive properties—a characteristic often observed in housing markets,
+                especially in cities with elevated housing costs.
+              </p>
+
+              <p class="py-3">
+                The histogram reveals a left-skewed distribution, indicating that the majority of properties fall within
+                a relatively "affordable" price range, while a smaller number of luxury properties are situated on the
+                higher end of the scale. In the context of such distributions, it is essential to note that the mean can
+                be a less reliable measure of central tendency. This is due to the influence of outliers, such as
+                high-priced luxury properties, which can significantly inflate the mean and shift it away from the bulk
+                of the data. Therefore, the median emerges as a more robust indicator for representing the typical house
+                price in the city, as it remains unaffected by extreme values and provides a more accurate reflection of
+                the central tendency within the dataset.
+              </p>
+            </div>
+          </div>
+
+        </div> <!-- End Chart Analysis Element -->
+
+        <!-- Chart Analysis Element -->
+        <div class="container" data-aos="fade-up" data-aos-delay="100"
+          style="border-top: solid 1px rgba(67, 63, 63, 0.17);">
+
+          <div class="row gy-4 justify-content-center">
+            <div class="col-lg-8">
+              <img src="assets/img/Histogram_Property_Types.jpg" class="img-fluid" alt="" style="margin-top: 50px;">
+            </div>
+            <div class="col-lg-4 content" style="margin-top: 80px;">
+              <h2 style="margin-bottom: 20px; text-align: center;">Housing Prices by Property Type</h2>
+              <p>
+                Following the overall market trend, the distribution of property prices is distinctly left-skewed,
+                reflecting a concentration of lower-priced properties with a smaller proportion extending into the
+                luxury
+                segment. However, pricing dynamics vary significantly across property types, giving a complete
+                view of the Vancouver real estate market. Houses stand out as the most expensive category, characterized
+                by the
+                highest median and mean prices, alongside a pronounced right skew that highlights a substantial share of
+                high-priced listings. In contrast, condos feature lower median and mean prices and a less skewed
+                distribution, indicating a more balanced and accessible price range.</p>
+              <p>
+
+                Multi-family homes occupy the middle ground in terms of pricing, with moderate skewness suggesting a mix
+                of both affordable and high-value properties. Townhouses, meanwhile, show relatively lower median and
+                mean
+                prices compared to houses, with a more evenly distributed price range that appeals to a broader
+                demographic. These observations highlight the segmented nature of the market: houses predominantly serve
+                high-end buyers, while condos and townhouses provide more affordable options. The presence of
+                high-priced
+                properties across all categories underscores the potential for luxury investment opportunities, making
+                Vancouver's real estate market attractive to a diverse spectrum of buyers and investors.
+
+              </p>
+
+            </div>
+          </div>
+
+        </div> <!-- End Chart Analysis Element -->
+
+        <!-- Chart Analysis Element -->
+        <div class="container" data-aos="fade-up" data-aos-delay="100"
+          style="border-top: solid 1px rgba(67, 63, 63, 0.17);">
+
+          <div class="row gy-4 justify-content-center">
+            <div class="col-lg-8">
+              <img src="assets/img/Metrics_Property_Types.jpg" class="img-fluid" alt="" style="margin-top: 50px;">
+            </div>
+            <div class="col-lg-4 content" style="margin-top: 80px;">
+              <h2 style="margin-bottom: 20px; text-align: center;">Distribution of Housing Prices</h2>
+              <p>As previously noted, the mean serves as a useful reference point for identifying the average cost of a
+                property within a
+                specific segment. However, in a skewed distribution, this metric can be heavily influenced by extreme
+                values, potentially misrepresenting typical pricing. In contrast, the median provides a more reliable
+                measure, offering a clearer perspective on the central pricing trends without being distorted by
+                outliers. </p>
+              <p> The following chart illustrates the mean and median prices grouped by property type, offering
+                actionable insights for professionals in the real estate sector. By analyzing these metrics, agents and
+                brokers can develop data-driven pricing strategies that align with varying client budgets and
+                preferences. For instance, understanding that houses dominate the higher price range, while condos
+                present a more affordable option, enables targeted marketing efforts and tailored investment advice.
+                Leveraging this information can lead to more effective decision-making and stronger alignment with the
+                financial profiles of diverse clientele. </p>
+
+            </div>
+          </div>
+
+        </div> <!-- End Chart Analysis Element -->
+
+        <!-- Stats Section -->
+        <section id="stats" class="stats section">
+
+          <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+              <div class="col-lg-6 col-md-6 d-flex flex-column align-items-center">
+                <i class="bi bi-house"></i>
+                <div class="stats-item">
+                  <span data-purecounter-start="0" data-purecounter-end="3880000" data-purecounter-duration="1"
+                    class="purecounter" data-purecounter-separator="true"></span>
+                  <p style="text-align: center;">Median Price for a House in Vancouver (CAD)</p>
+                </div>
+              </div><!-- End Stats Item -->
+
+              <div class="col-lg-6 col-md-6 d-flex flex-column align-items-center">
+                <i class="bi bi-building-fill-check"></i>
+                <div class="stats-item">
+                  <span data-purecounter-start="0" data-purecounter-end="919000" data-purecounter-duration="1"
+                    class="purecounter" data-purecounter-separator="true"></span>
+                  <p style="text-align: center;">Median Price for a Condo in Vancouver (CAD)</p>
+                </div>
+              </div><!-- End Stats Item -->
+
+            </div>
+
+          </div>
+
+        </section><!-- /Stats Section -->
+
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- Distribution Properties -->
+    <div>
+      <!-- Section Title -->
+      <div id="distribution" class="container section-title" data-aos="fade-up" style="margin-top: 60px;">
+        <h2>Distribution of Property Types in Vancouver</h2>
+        <p style="margin-bottom: 30px;text-align: justify;">
+          This section delivers a thorough analysis of Vancouver's housing market, showcasing its diverse offerings
+          tailored to varying buyer preferences and lifestyles. Condos, accounting for 43.9% of the market, and houses,
+          making up 34.2%, dominate the property landscape. The strong presence of condos highlights a growing demand
+          for low-maintenance living and easy access to urban conveniences, reflecting the dynamic and vibrant lifestyle
+          often associated with Vancouver's city culture.
+        </p>
+
+        <p style="margin-bottom: 30px;text-align: justify;">
+          Meanwhile, the significant presence of houses underscores the continued importance of detached homes in
+          Vancouver’s housing market. This highlights the sustained demand for traditional housing options, offering
+          valuable insights into buyer and seller behavior. The balance between condos and houses illustrates a
+          multifaceted market, where the desire for urban convenience coexists with the enduring appeal of traditional
+          homeownership, reflecting the diverse preferences of Vancouver’s residents.
+        </p>
+      </div><!-- End Section Title -->
+
+      <!-- Chart Analysis Element -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <img src="assets/img/Distribution_Property_Types.jpg" class="img-fluid" alt=""
+              style="max-width: 50%; height: auto;">
+          </div>
+        </div>
+      </div> <!-- End Chart Analysis Element -->
+
+      <section id="stats" class="stats section">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="row gy-4">
+
+            <div class="col-lg-12 col-md-6 d-flex flex-column align-items-center">
+              <i class="bi bi-building-fill-check"></i>
+              <div class="stats-item">
+                <!-- <span data-purecounter-start="0" data-purecounter-end="44%" data-purecounter-duration="1"
+                  class="purecounter" data-purecounter-separator="true"></span> -->
+                <span>44%</span>
+                <p style="text-align: center;">of the properties in Vancouver are Condos</p>
+              </div>
+            </div><!-- End Stats Item -->
+
+
+
+
+          </div>
+
+        </div>
+
+      </section><!-- /Stats Section -->
+
+    </div> <!-- End Distribution Properties -->
+
+
+
+    <!-- Section Geospatial Analysis -->
+    <div id="geo" class="container section-title" data-aos="fade-up" style="margin-top: 60px; padding: 0;">
+      <h2>Geospatial Insights and Clustering Analysis</h2>
+      <p style="margin-bottom: 30px;text-align: justify;">This section provides an in-depth geospatial analysis of
+        Vancouver's housing market, offering information about the spatial distribution and pricing patterns of
+        various property types. Through a series of heatmaps, it visually depicts the concentration of housing types
+        across different neighborhoods, highlighting the regions where specific property categories are most
+        prevalent. Complementing this, a clustering analysis is performed, integrating location and price data to
+        uncover distinct property groupings and market trends. Together, these analytical approaches deliver a
+        holistic understanding of Vancouver's real estate dynamics, aiding in the identification of key areas of
+        activity and pricing variations.</p>
+
+    </div><!-- End Geospatial Analysis -->
+
+    <!-- Maps Section -->
+    <section id="geo" class="portfolio section" style="padding: 30px;">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="font-size: 25px; color: rgb(25, 1, 114);">Heat Map by Property Type</h2>
+        <p>The following visualizations are heat maps representing various types of properties in Vancouver, including
+          houses, condos, multi-family homes, and townhouses. These heat maps provide insights into the
+          geographic distribution and concentration of different property types across the city. Understanding these
+          patterns is crucial for prospective homebuyers, real estate investors, and city planners. By analyzing these
+          heat maps, stakeholders can identify trends, make informed decisions, and develop strategies that align with
+          the dynamic nature of Vancouver's real estate market.</p>
+      </div><!-- End Section Title -->
+      <div class="container">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-house">House Heat Map </li>
+            <li data-filter=".filter-condo">Condo Heat Map</li>
+            <li data-filter=".filter-multi">Multi Family Home Heat Map</li>
+            <li data-filter=".filter-town">Townhouse Heat Map</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-house">
+              <img src="assets/img/masonry-portfolio/house_heatmap.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>House Heat Map</h4>
+                <p>
+                  <a href="heatmaps/house_heatmap.html" target="_blank">Interactive map</a>.
+
+                </p>
+                <a href="assets/img/masonry-portfolio/house_heatmap.jpg" title="Expand Image"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="heatmaps/house_heatmap.html" title="Interactive Map" class="details-link" target="_blank">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-condo">
+              <img src="assets/img/masonry-portfolio/condo_heatmap.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Condo Heat Map</h4>
+                <p>
+                  <a href="heatmaps/condo_heatmap.html" target="_blank">Interactive map</a>.
+
+                </p>
+                <a href="assets/img/masonry-portfolio/condo_heatmap.jpg" title="Expand Image"
+                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="heatmaps/condo_heatmap.html" title="Interactive Map" class="details-link" target="_blank"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-multi">
+              <img src="assets/img/masonry-portfolio/multi_heatmap.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Multi House Heat Map</h4>
+                <p>
+                  <a href="heatmaps/multi_heatmap.html" target="_blank">Interactive map</a>.
+
+                </p>
+                <a href="assets/img/masonry-portfolio/multi_heatmap.jpg" title="Expand Image"
+                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                    class="bi bi-zoom-in"></i></a>
+                <a href="heatmaps/multi_heatmap.html" title="Interactive Map" class="details-link" target="_blank"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-town">
+              <img src="assets/img/masonry-portfolio/town_heatmap.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Townhouse Heat Map</h4>
+                <p>
+                  <a href="heatmaps/townhouse_heatmap.html" target="_blank">Interactive map</a>.
+
+                </p>
+                <a href="assets/img/masonry-portfolio/town_heatmap.jpg" title="Expand Image"
+                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="heatmaps/townhouse_heatmap.html" title="Interactive Map" class="details-link"
+                  target="_blank"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+      </div>
+
+    </section><!-- /Maps Section -->
+
+    <!-- Cluster Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="font-size: 25px; color: rgb(25, 1, 114);">Clustering Analysis</h2>
+        <p>
+          This section provides a clustering analysis of Vancouver's property market, using algorithms to define
+          distinct zones (clusters) based on property coordinates and prices. This approach reveals patterns and
+          relationships within the market that might not be immediately visible, offering practical insights into
+          regional trends and dynamics.
+        </p>
+      </div><!-- End Section Title -->
+      <!-- Graphs -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <img src="assets/img/cluster.jpg" class="img-fluid" alt="Cluster Image" style="max-width: 65%; height: auto;">
+
+        </div>
+
+        <div style="padding: 60px 0;">
+          <p>The clustering analysis reveals various geographical areas of properties,
+            offering a detailed perspective on Vancouver's real estate market. By analyzing property coordinates and
+            prices, unique patterns and trends emerge within each zone (cluster). These insights are invaluable to
+            potential
+            buyers, investors, and urban planners, as they highlight specific market segments and property
+            characteristics
+            across various regions. This understanding supports informed decision-making and the development of
+            targeted
+            strategies. The interactive cluster map is accessible through this <a
+              href="heatmaps/zones_map_with_legend.html" target="_blank" rel="noopener noreferrer">link</a></p>
+
+          <p>To gain a deeper understanding, the next phase involves a detailed examination of each zone. Key
+            metrics
+            such as mean and median prices will be calculated, and box plots will be generated to visualize the price
+            distributions within clusters. This comprehensive analysis will shed light on the unique characteristics
+            and
+            pricing trends that define each zone, providing actionable insights for stakeholders.</p>
+        </div>
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-8 justify-content-center">
+            <img src="assets/img/Cluster_MM_Property_Types.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-4 d-flex justify-content-center">
+            <img src="assets/img/Price_Distribution_by_Cluster.jpg" class="img-fluid"
+              alt="Price Distribution by Cluster">
+          </div>
+
+        </div>
+        <div style="padding: 60px 0; padding-bottom: 0;">
+          <p>The clustering analysis of Vancouver's real estate market uncovers distinct patterns in property prices
+            linked to location. The properties are categorized into three zones, each representing different cost
+            brackets and geographical areas. Zone 2 comprises the most expensive properties, predominantly situated
+            in Vancouver Downtown, with an average price of approximately $7.6 million. In contrast, Zones 1 and 3
+            feature more affordable options, with average prices ranging between $1.5 million and $1.7 million.</p>
+          <p>
+            This segmentation provides useful insights into Vancouver's property market, enabling potential buyers,
+            investors, and urban planners to identify specific market segments and understand the economic dynamics of
+            different regions. Recognizing areas with similar pricing structures allows stakeholders to make informed
+            decisions and craft tailored strategies.</p>
+        </div>
+
+      </div> <!-- End Chart Analysis Element -->
+
+    </section><!-- /Clustering Section -->
+
+    <!-- Section Conclusion -->
+    <div id="conclusion" class="container section-title" data-aos="fade-up">
+      <h2>Conclusion</h2>
+      <p style="margin-bottom: 30px;text-align: justify;">
+        This report has provided a comprehensive analysis of Vancouver's real estate market, highlighting key trends in
+        property prices, distribution patterns, and geographical dynamics. Using data from Zillow and advanced
+        analytical techniques, significant differences across property types were identified, pricing hotspots were
+        pinpointed through heatmaps, and distinct market segments were uncovered using clustering analysis.</p>
+      <p>
+        These findings offer valuable insights for buyers, investors, and urban planners, enabling more informed
+        decisions and targeted strategies. By leveraging data-driven approaches, it is possible to navigate Vancouver's
+        property market with greater confidence and precision.
+
+      </p>
+
+    </div><!-- End Section Conclusion -->
+
+
+
+
+
+
+
+
+
+
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h4 class="sitename" style="text-align: center; margin-bottom: 30px;"> Author: Jaime Pantoja</h4>
+      <!-- <p style="text-align: center;">Turning raw data into valuable insights, driving efficiency and innovation through
+        data analytics</p> -->
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/jaimeppantoja" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="mailto:canjpo@gmail.com" target="_blank"><i class="bi bi-envelope flex-shrink-0"></i></a>
+        <a href="https://www.linkedin.com/in/japaor/" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <!-- <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Jaime Pantoja</strong> <span>All Rights Reserved</span>
+        </div>
+      </div> -->
+    </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>
